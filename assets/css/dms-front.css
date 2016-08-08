@@ -1,0 +1,16 @@
+.dms-container {
+    width: auto;
+}
+
+.dms-container label {
+    display: block;
+}
+
+.error-front {
+    color: red;
+}
+
+.widget-area div.dms-container {
+	width: 100%;
+	padding: 15px 0;
+}

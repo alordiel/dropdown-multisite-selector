@@ -1,0 +1,185 @@
+fieldset {
+width: 449px;
+}
+
+.dms-admin{
+	margin: 0 auto;
+    width: 53%;
+    min-width: 460px;
+}
+
+.dms-formular {
+border: 1px solid #ddd;
+padding: 10px;
+overflow: hidden;
+}
+
+.dms-admin h1 {
+    margin-bottom: 40px;
+}
+
+.dms-admin p {
+	margin-left: 10px;
+}
+
+.dms-admin fieldset {
+    border: 1px solid #CCCCCC;
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type="button"],
+#dms-submit{
+	padding: 3px 10px;
+}
+
+#dms-add {
+    margin-left: 23px;
+    margin-right: 10px;
+}
+
+.overall-error,
+.error-log-name,
+.error-log-fields{
+   color: red;
+   display: block;
+   background-color: rgb(255, 210, 210);
+   padding: 5px;
+   border-radius: 4px;
+   font-size: 1.2em;
+   display: none;
+}
+
+.succes_log {
+  color: green;
+  background-color: rgb(112, 255, 112);
+  display: block;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 1.2em;
+  display: none
+}
+
+input.del_row {
+    border-radius: 104px;
+    background: red;
+    color: #fff;
+    padding: 3px;
+}
+
+input.del_row:hover{
+    cursor: pointer;
+    background: rgb(189, 29, 29);
+}
+
+fieldset.middle-box {
+    position: relative;
+}
+
+div.mask-middle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+}
+
+.show-option{
+    height: auto;
+    opacity: 1;
+}
+
+.hide-option{
+    opacity: 0;
+    height: 0;
+}
+
+.transition{
+    -webkit-transition: all 1s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+        -moz-transition: all 1s ease-out;  /* Firefox 4-15 */
+          -o-transition: all 1s ease-out;  /* Opera 10.50–12.00 */
+             transition: all 1s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera     12.50+ */
+}
+
+#first-tag.hidden{
+    display: none;
+}
+
+.tabs-titles h2 {
+margin: 0;
+}
+
+ul.tabs {
+border-bottom: 1px solid #ccc;
+padding: 0;
+}
+
+.tabs-titles li {
+float: left;
+width: auto;
+margin-left: 10px;
+margin-bottom: 0;
+border-top: 1px solid #ccc;
+border-left: 1px solid #ccc;
+border-right: 1px solid #ccc;
+padding: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+.tabs-titles li:hover{
+    background-color: #ddd;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.li-tabs.active{
+    background-color: #dde;
+}
+
+.dms-tab2 label {
+    width: 182px;
+    display: inline-block;
+    position: relative;
+}
+
+.wp-picker-container {
+    line-height: 37px;
+    margin-top: 0;
+}
+
+.hint{
+    cursor: pointer;
+    color: blue;
+}
+
+.border-radius-hint{
+    background-color: #f2e5b0;
+    border: 1px solid #ccc;
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: -49px;
+    width: 353px;
+}
+
+.border-radius:hover .border-radius-hint{
+    display: block;
+}
+
+.import-csv-dms-form{
+  position: relative;
+}
+
+.mask-foggy {
+  width: 491px;
+  height: 79px;
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  opacity: 0.3;
+}
