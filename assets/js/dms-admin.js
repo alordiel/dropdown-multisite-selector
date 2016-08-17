@@ -48,20 +48,6 @@ jQuery(document).ready(function(){
 
 	});
 
-	jQuery('.ttab3').click(function(){
-		hideTheElemnts(this);
-		jQuery('.dms-tab3').removeClass('hide-option');
-		jQuery('.dms-tab3').css('display','block');
-		jQuery('.dms-tab3').addClass("transition show-option");
-	});
-
-	jQuery('.ttab4').click(function(){
-		hideTheElemnts(this);
-		jQuery('.dms-tab4').removeClass('hide-option');
-		jQuery('.dms-tab4').css('display','block');
-		jQuery('.dms-tab4').addClass("transition show-option");
-	});
-
 	function hideTheElemnts(x){
 		jQuery('.li-tabs').removeClass('active');
 		jQuery(x).addClass('active');
@@ -93,8 +79,6 @@ jQuery(document).ready(function(){
 		return false;
 
 	});
-	
-	jQuery('.color-field').wpColorPicker();
 	
 	//Delete row
 	jQuery('body').on('click', 'input.del_row',function(){

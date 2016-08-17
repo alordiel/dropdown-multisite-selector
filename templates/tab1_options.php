@@ -26,11 +26,11 @@
 
 			<hr>
 			<input type="checkbox" <?php if($settings['targetBlank'] == 'true'){echo "checked";} ?> id="new-window-opt" name="new-window-opt">
-			<label for="new-window-opt"><?php _e('On change open the links in new tab.','dropdown-multisite-selector') ?></label>
+			<label for="new-window-opt"><?php _e('Open the links in new tab.','dropdown-multisite-selector') ?></label>
 
 			<hr>
 			<input type="checkbox" <?php if($settings['alphabeticOrder'] == 'true'){echo "checked";} ?> id="order-opt" name="order-opt">
-			<label for="order-opt"><?php _e('List all the links in alphabetical order. ','dropdown-multisite-selector') ?></label>
+			<label for="order-opt"><?php _e('Order the links in alphabetical order. ','dropdown-multisite-selector') ?></label>
 
 			<div class="first-tag-wrap <?php if($multisite=='none'){echo 'hidden';} ?>" >
 				<hr>
@@ -47,7 +47,7 @@
 			<input id="radio-users" type="radio" name="multisite" <?php if ($multisite=='usersonly') {echo 'checked="checked"';} ?> value="usersonly"><?php _e('Show only the sites where the user is registered in the WMN.','dropdown-multisite-selector'); ?><br>
 		</fieldset>
 
-		<fieldset class="middle-box">
+		<fieldset class="middle-box dms-list-of-urls">
 			<legend><?php _e('Dropdown fields','dropdown-multisite-selector');?></legend>
 			<div <?php if($multisite!='none' && $multisite){echo 'class="mask-middle"';} ?> ></div>
 			<p class="error-log-fields"></p>

@@ -1,4 +1,4 @@
-<div class="block-tabs dms-tab4 hide-option dms-faq">
+<div class="block-tabs dms-tab2 hide-option dms-faq">
 	<ul>
 		<li>
 			<h2><?php _e('How does the shortcodes works?','dropdown-multisite-selector') ?></h2>

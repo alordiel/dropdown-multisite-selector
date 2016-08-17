@@ -8,36 +8,13 @@ function build_select(){
 	$sites_per_user;
 	$current_site_id;
 
-	$name = false; // the name of the select's label
-	$output=""; // the output
-	$multisite =""; // the multisite option
-	$placeholder="";
-	$settings = array();
-
-	$options_db_name = 'dms_select_name';
-	$options_db_multisite = 'dms_multisite';
-	$options_db_placeholder = 'dms_placeholder';
-	$options_db_settings = 'dms_settings';
+	$options 		= get_option( 'dms_settings' );
+	$name 			= $options['dms_select_name'];
+	$multisite 		= $options['dms_multisite'];
+	$placeholder 	= $options['dms_placeholder'];
+	$settings 		= $options['dms_options'];
 
 	$front = new DMS_FRONT();
-
-	if ( get_option( $options_db_name ) ) {
-		$name = get_option( $options_db_name );
-	}
-
-	if ( get_option( $options_db_multisite ) ) {
-		$multisite = get_option( $options_db_multisite );
-	}
-
-	if ( get_option( $options_db_settings ) ) {
-		$settings = get_option( $options_db_settings );
-	}
-
-	if ( get_option( $options_db_placeholder ) ) {
-		$placeholder = get_option( $options_db_placeholder );
-	} else {
-		$placeholder = __('Select Option','dropdown-multisite-selector');
-	}
 
 	$output .="<div class='dms-container'>";
 
