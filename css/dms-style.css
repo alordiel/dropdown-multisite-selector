@@ -1,0 +1,93 @@
+.dms-admin{
+	margin-left:50px;
+    width: 70%;
+    min-width: 300px;
+}
+
+.dms-admin h1 {
+    margin-bottom: 40px;
+}
+
+.dms-admin p {
+	margin-left: 10px;
+}
+
+.dms-admin fieldset {
+    max-width: 470px;
+    border: 1px solid #CCCCCC;
+    margin: 10px;
+    padding: 10px;
+}
+
+input[type="button"],
+#dms-submit{
+	padding: 3px 10px;
+}
+
+#dms-add {
+    margin-left: 23px;
+    margin-right: 10px;
+}
+
+.succes_log,
+.overall-error,
+.error-log-name,
+.error-log-fields{
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-size: 17px;
+    display: none;
+    max-width: 480px;
+}
+
+.overall-error,
+.error-log-name,
+.error-log-fields{
+    color: red;
+    border: 2px solid red;
+}
+
+.succes_log {
+    color: green;
+    border: 2px solid #609e02;
+}
+
+.message-on.succes_log,
+.message-on.overall-error,
+.message-on.error-log-name,
+.message-on.error-log-fields{
+    display: block;
+}
+
+input.del_row {
+    background-color: red;
+    color: #fff;
+    padding: 2px 10PX;
+}
+
+input.add_row {
+    background-color: green;
+    color: #fff;
+    padding: 2px 10PX;
+}
+
+input.add_row:hover {
+    background-color: #045a04;
+    cursor: pointer;
+}
+input.del_row:hover{
+    cursor: pointer;
+    background-color: rgb(189, 29, 29);
+}
+fieldset.middle-box {
+    position: relative;
+}
+div.mask-middle {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+}
