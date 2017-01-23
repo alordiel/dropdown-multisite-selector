@@ -153,8 +153,7 @@ jQuery(document).ready(function(){
 		if ( error_name != 0) {
 			return false;
 		}
-		
-		console.log( jQuery("#_wpnonce").val());
+
 		//Ajax
 		var the_data = {
 			action: 'dms_add_fields',

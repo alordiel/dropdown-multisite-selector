@@ -6,8 +6,8 @@ function dms_ajax_update_fields() {
 	check_ajax_referer( 'dms_nonce_секюрити', 'security' );
 
 	global $wpdb;
-	$name;
-	$options;
+	$name 			= '';
+	$options 		= '';
 	$multisite 		= 'none';
 	$sorting 		= 'none';
 	$placeholder 	= '';
@@ -71,7 +71,7 @@ function dms_ajax_update_fields() {
 		$name = cleanInput(sanitize($name));
 	}
 	$options 		= cleanInput(sanitize($options));
-	$placeholder 	= cleanInput(sanitize($placeholder));
+	$placeholder 	= cleanInput(sanitize( htmlspecialchars($placeholder) ));
 
 
   
