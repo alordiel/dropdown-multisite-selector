@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-
 	
 	//Add new row in the table with new fields
 	jQuery('#dms-table').on('click','.add_row',function(){
@@ -7,12 +6,11 @@ jQuery(document).ready(function(){
 		var parent = jQuery(this).parent().parent();
 		
 		//build the new row
-		var newRow = jQuery('<tr></tr>').addClass('new-row');
-
-		var tdName = jQuery('<td></td>').html('<input type="text" name="field_name" >').appendTo(newRow);
-		var tdUrl = jQuery('<td></td>').html('<input type="text" class="urls" name="field_url" >').appendTo(newRow);
-		var tdDel = jQuery('<td></td>').html('<input type="button" class="del_row" title="Delete tish row" value="x">').appendTo(newRow);
-		var tdDel = jQuery('<td></td>').html('<input type="button" class="add_row" title="Add row" value="+">').appendTo(newRow);
+		var newRow 	= jQuery('<tr></tr>').addClass('new-row');
+		var tdName 	= jQuery('<td></td>').html('<input type="text" name="field_name" >').appendTo(newRow);
+		var tdUrl 	= jQuery('<td></td>').html('<input type="text" class="urls" name="field_url" >').appendTo(newRow);
+		var tdDel		= jQuery('<td></td>').html('<input type="button" class="del_row" title="Delete tish row" value="x">').appendTo(newRow);
+		var tdDel		= jQuery('<td></td>').html('<input type="button" class="add_row" title="Add row" value="+">').appendTo(newRow);
 		
 		newRow.fadeIn('slow', function(){
 			jQuery(parent).after(this);
@@ -66,22 +64,20 @@ jQuery(document).ready(function(){
 
 	//Submit form
 	jQuery('#dms-submit').on('click',function(){
-		var error_fields = 0;
-		var error_name = 0;
-		var theSelectName;
-		var theOptions = {};
-		var placeholder = "";
+
+		var error_fields 	= 0;
+		var error_name 		= 0;
+		var theSelectName = jQuery('#select_name').val();
+		var theOptions 		= {};
+		var placeholder 	= jQuery('#select_placeholder').val();
 		
 		//Clear the success and error log
 		jQuery('.succes_log').empty();
 		jQuery('.overall-error').empty();
+		jQuery(".error-log-name").empty();
 
 		//clear all messages
 		jQuery(".message-on").removeClass('message-on');
-
-		//Get the name of the Select option
-		theSelectName = jQuery('#select_name').val();
-		placeholder = jQuery('#select_placeholder').val();
 
 		if (theSelectName != "") {
 
@@ -93,10 +89,6 @@ jQuery(document).ready(function(){
 				error_fields ++;
 
 			}
-			else{
-				jQuery(".error-log-name").empty();
-			}	
-			
 		}
 
 		//Get multisite options
@@ -157,17 +149,16 @@ jQuery(document).ready(function(){
 			jQuery(".error-log-fields").addClass('message-on')
 			return false;
 		}
-		else{
-			jQuery(".error-log-fields").empty();
-		}
 
 		if ( error_name != 0) {
 			return false;
 		}
 		
+		console.log( jQuery("#_wpnonce").val());
 		//Ajax
 		var the_data = {
 			action: 'dms_add_fields',
+			security: jQuery("#_wpnonce").val(),
 			name: theSelectName,
 			options: theOptions,
 			multisite: multisite,

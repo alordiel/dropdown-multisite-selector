@@ -1,11 +1,18 @@
 <?php
+//check if logged in and admin
+if (!is_user_logged_in() || !current_user_can('manage_options')) {
 
-$name="";
-$options;
-$multisite;
-$placeholder = __('Select option','dropdown-multisite-selector');
-$sorting = 'none';
+	_e('This page is forbidden for non-admins!','dropdown-multisite-selector');
+	die();
 
+}
+
+$current_user = wp_get_current_user();
+$name 				= "";
+$options 			= "";
+$multisite 		= "";
+$placeholder 	= __('Select option','dropdown-multisite-selector');
+$sorting 			= 'none';
 
 if(get_option( 'dms_select_name') ){
 	$name = get_option( 'dms_select_name');
@@ -29,7 +36,7 @@ if (get_option('dms_placeholder')) {
 if (get_option('dms_sorting')) {
 	$sorting = get_option( 'dms_sorting' );
 }
-else
+
 ?>
 
 <div class="dms-admin">
@@ -134,10 +141,8 @@ else
 
 			</fieldset>
 			
-
-				<input type="submit" value="<?php _e('Save','dropdown-multisite-selector');?>" name="submit" id="dms-submit">
-				
-				
+			<input type="hidden" id="_wpnonce" name="nonce" value="<?php echo wp_create_nonce( "dms_nonce_секюрити" ) ?>">
+			<input type="submit" value="<?php _e('Save','dropdown-multisite-selector');?>" name="submit" id="dms-submit">
 		
 		</form>
 		 
