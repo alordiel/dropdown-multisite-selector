@@ -36,11 +36,11 @@ if ( ! defined( 'WPINC' ) ) {
 define( 'DMS_PLUGINS_DIR_ABS', dirname(  __FILE__  ) );
 define( 'DMS_PLUGINS_DIR_REL', plugins_url( basename(dirname(  __FILE__  ))  ) );
 
-include_once DMS_PLUGINS_DIR_ABS . "/functions/wordpress.php";
-include_once DMS_PLUGINS_DIR_ABS . "/functions/functions.php";
-include_once DMS_PLUGINS_DIR_ABS . "/functions/ajax.php";
-include_once DMS_PLUGINS_DIR_ABS . "/functions/widgets.php";
-include_once DMS_PLUGINS_DIR_ABS . "/functions/shortcodes.php";
+include_once (DMS_PLUGINS_DIR_ABS . platformSlashes("/functions/wordpress.php"));
+include_once (DMS_PLUGINS_DIR_ABS . platformSlashes("/functions/functions.php"));
+include_once (DMS_PLUGINS_DIR_ABS . platformSlashes("/functions/ajax.php"));
+include_once (DMS_PLUGINS_DIR_ABS . platformSlashes("/functions/widgets.php"));
+include_once (DMS_PLUGINS_DIR_ABS . platformSlashes("/functions/shortcodes.php"));
 
 
 // On install check if dms_mutisite option exists, if not - this is updating from 0.1 so create it with option 'none'
@@ -69,4 +69,8 @@ function dms_plugin_updated() {
 	if(!get_option('dms_placeholder')){
 	   	update_option('dms_placeholder', 'Select Option');
 	}
+}
+
+function platformSlashes($path) {
+    return str_replace('/', DIRECTORY_SEPARATOR, $path);
 }

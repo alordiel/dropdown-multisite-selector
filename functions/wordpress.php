@@ -5,7 +5,7 @@
  */
 add_action('plugins_loaded', 'dropdown_multisite_meta_init');
 function dropdown_multisite_meta_init() {
-	load_plugin_textdomain( 'dropdown-multisite-selector', false, DMS_PLUGINS_DIR_ABS . '/languages' ); 
+	load_plugin_textdomain( 'dropdown-multisite-selector', false, DMS_PLUGINS_DIR_ABS . platformSlashes('/languages' ) ); 
 }
 
 
@@ -54,7 +54,7 @@ function register_submenu(){
  */ 
 function dms_admin(){
 
-	$out = include_once DMS_PLUGINS_DIR_ABS .'/templates/dms-admin.php';
+	$out = include_once DMS_PLUGINS_DIR_ABS . platformSlashes('/templates/dms-admin.php');
 
 	return $out;
 }
