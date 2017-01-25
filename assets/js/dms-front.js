@@ -6,7 +6,7 @@ jQuery(document).ready(function(){
 		if (jQuery(this).hasClass('open-in-new-tab')) {
 			window.open(x, '_blank');
 		} else {
-			window.location.href = x;
+			if (x!='') {window.location.href = x;}
 		}	
 	});
 });

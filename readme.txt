@@ -65,6 +65,15 @@ From your WordPress dashboard
 
 == Changelog ==
 
+= 0.6.4 =
+* fixed bug with redirect on target blank when option without value is selected.
+
+= 0.6.3 =
+* fixed issue with WordPress repository and the last commit
+
+= 0.6.2 =
+* fixed issue with including a php files and trailing slashes for XAMPP and may be some windows server systems 
+
 = 0.6.1. =
 * Implementing better security
 * Folder restructuring
