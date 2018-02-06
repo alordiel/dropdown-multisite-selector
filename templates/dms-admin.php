@@ -67,7 +67,7 @@ if (get_option('dms_sorting')) {
 
 				<input id="radio-none" type="radio" name="multisite" <?php if ($multisite=='none' || ! $multisite) {echo 'checked="checked"';} ?> value="none"><?php _e('Disabled','dropdown-multisite-selector'); ?><br>
 				<input id="radio-all" type="radio" name="multisite" <?php if ($multisite=='all') {echo 'checked="checked"';} ?> value="all"><?php _e('Show all sites in the WMN.','dropdown-multisite-selector'); ?><br>
-				<input id="radio-users" type="radio" name="multisite" <?php if ($multisite=='usersonly') {echo 'checked="checked"';} ?> value="usersonly"><?php _e('Show only the sites where the user is registered in the WMN.(works only for loged in users)','dropdown-multisite-selector'); ?><br>
+				<input id="radio-users" type="radio" name="multisite" <?php if ($multisite=='usersonly') {echo 'checked="checked"';} ?> value="usersonly"><?php _e('Show only the sites where the user is registered in the WMN. (works only for logged in users)','dropdown-multisite-selector'); ?><br>
 
 			</fieldset>
 
