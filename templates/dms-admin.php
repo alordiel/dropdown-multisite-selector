@@ -165,7 +165,7 @@ if (get_option('dms_sorting')) {
 			</ol>
 		</p>
 		<p><?php _e('Please note that if you use a multisite and your site url is different from your wordpress url there the main site url will as the wordpress site url for fixing this issue check the <a href="http://codex.wordpress.org/Changing_The_Site_URL">wordpress codex</a>.','dropdown-multisite-selector') ?></p>
-		<p><?php _e('For any support or bug reporting please use this <a href="http://wordpress.org/support/plugin/dropdown-multisite-selector">link</a>') ?></p>
+		<p><?php _e('For any support or bug reporting please use this <a href="https://wordpress.org/support/plugin/dropdown-multisite-selector">link</a>') ?></p>
 	
 	</div>
 
