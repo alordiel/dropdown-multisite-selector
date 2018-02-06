@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Dropdown multisite selector
- * Plugin URI:        https://github.com/alordiel/dropdown-multisite
+ * Plugin URI:        https://github.com/alordiel/dropdown-multisite-selector
  * Description:       Allows you to configure a select option of redirecting to different webpages.
  * Version:           0.6.4
  * Author:            alordiel
@@ -10,7 +10,7 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages/
- * GitHub Plugin URI: https://github.com/alordiel/dropdown-multisite
+ * GitHub Plugin URI: https://github.com/alordiel/dropdown-multisite-selector
  */
 
 /*  Copyright 2014-2016 Alexander Vasilev  (email : alexander.vasilev@protonmail.com)
