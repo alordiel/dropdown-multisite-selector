@@ -63,7 +63,7 @@ if (get_option('dms_sorting')) {
 
 			<fieldset>
 				
-				<legend><?php _e('Wordpress Multisite Network(WMN) Options','dropdown-multisite-selector'); ?></legend>
+				<legend><?php _e('WordPress Multisite Network (WMN) Options','dropdown-multisite-selector'); ?></legend>
 
 				<input id="radio-none" type="radio" name="multisite" <?php if ($multisite=='none' || ! $multisite) {echo 'checked="checked"';} ?> value="none"><?php _e('Disabled','dropdown-multisite-selector'); ?><br>
 				<input id="radio-all" type="radio" name="multisite" <?php if ($multisite=='all') {echo 'checked="checked"';} ?> value="all"><?php _e('Show all sites in the WMN.','dropdown-multisite-selector'); ?><br>
@@ -153,7 +153,7 @@ if (get_option('dms_sorting')) {
 		<h2><?php _e('Description','dropdown-multisite-selector');?></h2>
 		
 		<p> <?php _e('This plugin allows you to add a simple select filed to your page giving the option to the user to switch between different urls/pages/sites. In the fields below just fill the requiered information. "Option Name" is the name that will be seen by the user, and "URL to redirect" is the place you would like to redirect your visitor when selecting the relevant option.');?></p>
-		<p> <?php _e('The Wordpress Multisite Network(WMN) Options gives you the option for creating an automatic list of options. <b>Show all sites in the WMN</b> is for a list with all the sites from the WMN, while the <b>Show only the sites where the user is registered in the WMN</b> is only for those sites where the logged in user is already registered - it is a nice and easy way to navigate throug your multisite.','dropdown-multisite-selector'); ?></p>
+		<p> <?php _e('The WordPress Multisite Network (WMN) Options gives you the option for creating an automatic list of options. <b>Show all sites in the WMN</b> is for a list with all the sites from the WMN, while the <b>Show only the sites where the user is registered in the WMN</b> is only for those sites where the logged in user is already registered - it is a nice and easy way to navigate throug your multisite.','dropdown-multisite-selector'); ?></p>
 		<p> <?php _e('To add the select option on a page you can use this shortcode <code>[dms]</code>. It will use the options you have set from settings page.</br>If you would like to include it in a php file - use</br> <code>&lt;?php echo do_shortcode(\'[dms]\'); ?&gt;</code>','dropdown-multisite-selector');?></p>
 		<p> <?php _e('To add your own values in the shortcode use this one: </br><code>[dms_manual name="" placeholder="" target="" options=""]</code>','dropdown-multisite-selector');?> </br> 
 			<?php _e('Where:','dropdown-multisite-selector') ?>
@@ -164,7 +164,7 @@ if (get_option('dms_sorting')) {
 				<li><?php _e('options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"','dropdown-multisite-selector') ?></li>
 			</ol>
 		</p>
-		<p><?php _e('Please note that if you use a multisite and your site url is different from your wordpress url there the main site url will as the wordpress site url for fixing this issue check the <a href="http://codex.wordpress.org/Changing_The_Site_URL">wordpress codex</a>.','dropdown-multisite-selector') ?></p>
+		<p><?php _e('Please note that if you use a multisite and your site url is different from your WordPress URL there the main site url will as the WordPress site URL for fixing this issue check the <a href="http://codex.wordpress.org/Changing_The_Site_URL">WordPress codex</a>.','dropdown-multisite-selector') ?></p>
 		<p><?php _e('For any support or bug reporting please use this <a href="http://wordpress.org/support/plugin/dropdown-multisite-selector">link</a>') ?></p>
 	
 	</div>
