@@ -159,7 +159,7 @@ if (get_option('dms_sorting')) {
 			<?php _e('Where:','dropdown-multisite-selector') ?>
 			<ol>
 				<li><?php _e('name - the label of the select option (leave empty for no label)','dropdown-multisite-selector') ?></li>
-				<li><?php _e('placeholder - the first option that is showen in the select menu (like: "--  Select --")','dropdown-multisite-selector') ?></li>
+				<li><?php _e('placeholder - the first option that is shown in the select menu (like: "--  Select --")','dropdown-multisite-selector') ?></li>
 				<li><?php _e('target - could be "default" or "blank". This is the target of the link - "blank" is to be open in new window','dropdown-multisite-selector') ?></li>
 				<li><?php _e('options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"','dropdown-multisite-selector') ?></li>
 			</ol>
