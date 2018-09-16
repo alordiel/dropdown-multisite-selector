@@ -164,6 +164,7 @@ if (get_option('dms_sorting')) {
 				<li><?php _e('options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"','dropdown-multisite-selector') ?></li>
 			</ol>
 		</p>
+
 		<p><?php _e('Please note that if you use a multisite and your site url is different from your WordPress URL there the main site url will as the WordPress site URL for fixing this issue check the <a href="http://codex.wordpress.org/Changing_The_Site_URL">WordPress codex</a>.','dropdown-multisite-selector') ?></p>
 		<p><?php _e('For any support or bug reporting please use this <a href="http://wordpress.org/support/plugin/dropdown-multisite-selector">link</a>') ?></p>
 	
