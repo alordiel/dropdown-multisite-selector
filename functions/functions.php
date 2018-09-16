@@ -10,7 +10,7 @@ function noneOptions(){
 
 	//check if options data is entered
 	if ( !$options || !is_array($options) || count($options) == 0) {
-		$err = "<p class='error-front'>" . __("Missing data. Check if all the settigns are correctly set in your admin area regarding 'Dropdown Multisite selector'",'dropdown-multisite-selector') . "</p>";
+		$err = "<p class='error-front'>" . __("Missing data. Check if all the settings are correctly set in your admin area regarding 'Dropdown Multisite selector'",'dropdown-multisite-selector') . "</p>";
 		return $err;
 		die();
 	}

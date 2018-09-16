@@ -42,7 +42,7 @@ Once you have saved your settings you can see the result using this shortcode [d
 An example: 
 [dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|http://duckduckgo.com, Tracking search engine|http://google.bg"]
 
-If you would more functionality, please contact me to check if I can implemente it. Also thanks to everyone giving me hints how to improve this plug-in.
+If you would more functionality, please contact me to check if I can implement it. Also thanks to everyone giving me hints how to improve this plugin.
 
 == Installation ==
 = 
@@ -99,7 +99,7 @@ From your WordPress dashboard
 * Removed: the requirement for label name. Now you can build select option only with the selects' element (Option name and url) without label.
 
 = 0.3.3 =
-* Fix: Opps, the previous one didn't worked as expected :( Hope this one fix the problem
+* Fix: Oops, the previous one didn't worked as expected :( Hope this one fix the problem
 
 = 0.3.2 =
 * Fix: issues when updating from 0.1 to any higher version (thanks for reporting @jfullerton)

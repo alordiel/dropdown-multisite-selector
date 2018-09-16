@@ -77,35 +77,35 @@ function dms_ajax_update_fields() {
   
 	if ( get_option('dms_select_name' ) !=  $name ) {
 		if(!update_option('dms_select_name' , $name )) {
-			_e("Something went worng with updating your settigns.",'dropdown-multisite-selector');
+			_e("Something went wrong with updating your settings.",'dropdown-multisite-selector');
 			die();
 		}
 	}
 
 	if ( get_option( 'dms_options' ) != $options && $multisite=='none') {
 		if(!update_option('dms_options' , $options )) {
-		   _e("Something went worng with updating your settigns.",'dropdown-multisite-selector');
+		   _e("Something went wrong with updating your settings.",'dropdown-multisite-selector');
 			die();
 		}
 	}
 
 	if ( get_option( 'dms_multisite' ) != $multisite ) {
 		if(!update_option('dms_multisite' , $multisite )) {
-		   _e("Something went worng with updating your settigns.",'dropdown-multisite-selector');
+		   _e("Something went wrong with updating your settings.",'dropdown-multisite-selector');
 			die();
 		}
 	}
 
 	if ( get_option( 'dms_sorting'  ) != $sorting ) {
 		if(!update_option('dms_sorting' , $sorting )) {
-		   _e("Something went worng with updating your settigns.",'dropdown-multisite-selector');
+		   _e("Something went wrong with updating your settings.",'dropdown-multisite-selector');
 			die();
 		}
 	}
 
 	if ( get_option( 'dms_placeholder' ) != $placeholder ) {
 		if(!update_option('dms_placeholder' , $placeholder )) {
-		   _e("Something went worng with updating your settigns.",'dropdown-multisite-selector');
+		   _e("Something went wrong with updating your settings.",'dropdown-multisite-selector');
 			die();
 		}
 	}
