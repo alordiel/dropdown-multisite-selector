@@ -62,6 +62,9 @@ If you would more functionality, please contact me to check if I can implement i
 ### Changelog
 = 0.7.0 =
 * Added dependency on jQuery for the plugin's script
+* Added filter `dms_sites_arguments` - to control the attributes when 'Show all sites in the WMN' is selected
+* Added filter `dms_multisite_pairs`  - change the results returned from `get_sites()` 
+* Added filter `dms_users_sites` - control the sites when 'Show only the sites where the user is registered' is selected 
 * Code styling according WordPress CodeSniffer standards
 * Small code fixes and code clean up
 * Added default styles to admin button

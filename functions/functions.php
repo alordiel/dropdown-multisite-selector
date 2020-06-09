@@ -13,7 +13,6 @@ function noneOptions() {
 		$err = "<p class='error-front'>" . __( "Missing data. Check if all the settings are correctly set in your admin area regarding 'Dropdown Multisite selector'", 'dropdown-multisite-selector' ) . "</p>";
 
 		return $err;
-		wp_die();
 	}
 
 	//check for sorting options
@@ -47,6 +46,8 @@ function showAll() {
 		'orderby' => array( 'path' ),
 	);
 
+	apply_filters('dms_sites_arguments', $sites_arguments);
+
 	$all_wmn_sites   = get_sites( $sites_arguments );
 	$current_site_id = get_current_blog_id();
 	$multisite_pairs = array();
@@ -61,6 +62,9 @@ function showAll() {
 	}
 
 	ksort( $multisite_pairs );
+
+	apply_filters('dms_multisite_pairs', $multisite_pairs);
+
 	foreach ( $multisite_pairs as $name => $url ) {
 		$out .= "<option value='" . esc_url( $url ) . "'>" . trim( $name ) . '</option>';
 	}
@@ -74,6 +78,8 @@ function usersOnly() {
 	$out             = '';
 	$users_sites     = get_blogs_of_user( get_current_user_ID() );
 	$current_site_id = get_current_blog_id();
+
+	apply_filters('dms_users_sites', $users_sites);
 
 	foreach ( $users_sites as $site ) {
 		if ( $current_site_id != $site->userblog_id ) {
