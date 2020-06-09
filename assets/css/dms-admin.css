@@ -19,11 +19,6 @@
     padding: 10px;
 }
 
-input[type="button"],
-#dms-submit{
-	padding: 3px 10px;
-}
-
 #dms-add {
     margin-left: 23px;
     margin-right: 10px;
