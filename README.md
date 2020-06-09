@@ -1,15 +1,22 @@
 ## Plugin Name
 
 Tags: redirect, multisite, dropdown menu, flexible select, edit select options
+
 Requires at least: 3.8
+
 Contributors: alordiel
+
 Tested up to: 5.4.1.
+
 Stable tag: /trunk/
+
 License: GPLv2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Gives you the resources to make select field with redirecting options to a given URLs.
 
-##Description
+## Description
  
 
 Do you need a way to give your visitors the option to navigate easily from your site other sites (multisite)? 
@@ -59,7 +66,7 @@ If you would more functionality, please contact me to check if I can implement i
 1. Activate it from your Plugins' page.
 
 
-### Changelog
+## Changelog
 = 0.7.0 =
 * Date: 09.06.2020
 * Thanks for github issues and code suggestions to: @toremo &  @Zodiac1978
