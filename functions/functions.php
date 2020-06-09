@@ -38,21 +38,22 @@ function noneOptions() {
 //show all sites from the WMN
 function showAll() {
 
-	$out = '';
-	/*$site_arguments = array (
-		'public' => 1,
-		'archive'=> 0,
-		'deleted'=> 0,
-		'spam' 	 => 0,
-		'orderby'=> array('path'),
-	);*/
-	$all_wmn_sites   = get_sites();
+	$out             = '';
+	$sites_arguments = array(
+		'public'  => 1,
+		'archive' => 0,
+		'deleted' => 0,
+		'spam'    => 0,
+		'orderby' => array( 'path' ),
+	);
+
+	$all_wmn_sites   = get_sites( $sites_arguments );
 	$current_site_id = get_current_blog_id();
 	$multisite_pairs = array();
 
 	foreach ( $all_wmn_sites as $site ) {
 
-		if ( $current_site_id != $site->blog_id ) {
+		if ( $current_site_id !== $site->blog_id ) {
 			$the_site                                             = get_blog_details( $site->blog_id );
 			$multisite_pairs[ addslashes( $the_site->blogname ) ] = $the_site->siteurl;
 		}
@@ -61,9 +62,8 @@ function showAll() {
 
 	ksort( $multisite_pairs );
 	foreach ( $multisite_pairs as $name => $url ) {
-		$out .= "<option value='" . esc_url( $url ) . "'>" . trim( $name ) . "</option>";
+		$out .= "<option value='" . esc_url( $url ) . "'>" . trim( $name ) . '</option>';
 	}
-	echo '</pre>';
 
 	return $out;
 }

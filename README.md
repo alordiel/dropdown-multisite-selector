@@ -63,7 +63,8 @@ If you would more functionality, please contact me to check if I can implement i
 = 0.7.0 =
 * Added dependency on jQuery for the plugin's script
 * Code styling according WordPress CodeSniffer standards
-* Small code fixes
+* Small code fixes and code clean up
+* Added default styles to admin button
 
 
 = 0.6.4 =
