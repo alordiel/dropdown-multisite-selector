@@ -1,6 +1,6 @@
  === Plugin Name ===
 
-Tags: redirect, multisite, dropdown menu, flexible select, edit select options
+Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
 Tested up to: 5.4.1.
@@ -73,6 +73,10 @@ From your WordPress dashboard
 == Changelog ==
 
 = 0.7.0 =
+* Date: 09.06.2020
+* Thanks for github issues and code suggestions to: @toremo &  @Zodiac1978
+* And huge "Excuse me" to all that have waiting on update and making code compatible with WP 5.x.x
+* This updated includes:
 * Added dependency on jQuery for the plugin's script
 * Added filter `dms_sites_arguments` - to control the attributes when 'Show all sites in the WMN' is selected
 * Added filter `dms_multisite_pairs`  - change the results returned from `get_sites()`

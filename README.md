@@ -15,7 +15,7 @@ Gives you the resources to make select field with redirecting options to a given
 Do you need a way to give your visitors the option to navigate easily from your site other sites (multisite)? 
 This plugin will give you the option to configure a small select/dropdown field with fully configurable options and values (urls).
 
-*You can choose by three options:*
+**You can choose by three options:**
 
 * manually configure the number of the options from the dropdown element - pick up a name of your option and the relevant url where the user will be redirected after choosing it; 
 
@@ -61,7 +61,11 @@ If you would more functionality, please contact me to check if I can implement i
 
 ### Changelog
 = 0.7.0 =
-* Added dependency on jQuery for the plugin's script
+* Date: 09.06.2020
+* Thanks for github issues and code suggestions to: @toremo &  @Zodiac1978
+* And huge "Excuse me" to all that have waiting on update and making code compatible with WP 5.x.x 
+* This updated includes:
+* Added dependency on jQuery for the plugin's scripts 
 * Added filter `dms_sites_arguments` - to control the attributes when 'Show all sites in the WMN' is selected
 * Added filter `dms_multisite_pairs`  - change the results returned from `get_sites()` 
 * Added filter `dms_users_sites` - control the sites when 'Show only the sites where the user is registered' is selected 
