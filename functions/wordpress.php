@@ -5,7 +5,7 @@
  */
 add_action('plugins_loaded', 'dropdown_multisite_meta_init');
 function dropdown_multisite_meta_init() {
-	load_plugin_textdomain( 'dropdown-multisite-selector', false, DMS_PLUGINS_DIR_ABS . platformSlashes('/languages' ) ); 
+	load_plugin_textdomain( 'dropdown-multisite-selector', false, DMS_PLUGINS_DIR_ABS . platformSlashes('/languages' ) );
 }
 
 
@@ -16,9 +16,9 @@ add_action( 'admin_enqueue_scripts', 'admin_styles_script' );
 function admin_styles_script() {
 	wp_enqueue_script( 'dms-admin-js', DMS_PLUGINS_DIR_REL .'/assets/js/dms-admin.js'  );
 	wp_enqueue_style( 'dms-admin-css', DMS_PLUGINS_DIR_REL . '/assets/css/dms-admin.css' );
-	
+
 	//Adding localization for script string
-	$translation_array = array( 
+	$translation_array = array(
 		'tag_err' => __('Please enter a select tag name.'),
 		'let_err' => __('This field can contain only letters.'),
 		'emt_err' => __('All Names and URL fields should be filled.'),
@@ -35,7 +35,12 @@ function admin_styles_script() {
  */
 add_action( 'wp_enqueue_scripts', 'front_styles_script' );
 function front_styles_script(){
-	wp_enqueue_script( 'dms-js-front', DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js' , array(jquery), '1.0.0', true );
+	wp_enqueue_script(
+		'dms-js-front',
+		DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js' ,
+		array('jquery'),
+		filemtime(DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js'),
+		true );
 	wp_enqueue_style( 'dms-style-front', DMS_PLUGINS_DIR_REL . '/assets/css/dms-front.css' );
 }
 
@@ -44,14 +49,14 @@ function front_styles_script(){
  */
 add_action('admin_menu','register_submenu');
 function register_submenu(){
-	
+
 	add_submenu_page( 'options-general.php', 'Dropdown Multisite Selector', 'Dropdown Multisite', 'manage_options', 'dropdown-multisite-selector', 'dms_admin' );
 
 }
 
 /**
  * Building the admin part.
- */ 
+ */
 function dms_admin(){
 
 	$out = include_once DMS_PLUGINS_DIR_ABS . platformSlashes('/templates/dms-admin.php');
