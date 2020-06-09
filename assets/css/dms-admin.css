@@ -24,7 +24,7 @@
     margin-right: 10px;
 }
 
-.succes_log,
+.success_log,
 .overall-error,
 .error-log-name,
 .error-log-fields{
@@ -42,12 +42,12 @@
     border: 2px solid red;
 }
 
-.succes_log {
+.success_log {
     color: green;
     border: 2px solid #609e02;
 }
 
-.message-on.succes_log,
+.message-on.success_log,
 .message-on.overall-error,
 .message-on.error-log-name,
 .message-on.error-log-fields{

@@ -71,7 +71,7 @@ jQuery(document).ready(function () {
     var placeholder = jQuery('#select_placeholder').val();
 
     //Clear the success and error log
-    jQuery('.succes_log').empty();
+    jQuery('.success_log').empty();
     jQuery('.overall-error').empty();
     jQuery(".error-log-name").empty();
 
@@ -170,8 +170,8 @@ jQuery(document).ready(function () {
       success: function (response) {
 
         if (response == 1) {
-          jQuery(".succes_log").text(trans_str.suc_err);
-          jQuery(".succes_log").addClass('message-on');
+          jQuery(".success_log").text(trans_str.suc_err);
+          jQuery(".success_log").addClass('message-on');
         } else {
           jQuery(".error-log-fields").addClass('message-on');
           jQuery(".error-log-fields").text(response);

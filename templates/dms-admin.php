@@ -46,7 +46,7 @@ if ( get_option( 'dms_sorting' ) ) {
 
 	<div class="dms-formular">
 		<h2><?php _e( 'Options', 'dropdown-multisite-selector' ); ?></h2>
-		<p class="succes_log"></p>
+		<p class="success_log"></p>
 		<p class="overall-error"></p>
 		<form action="" id="dms-all-inputs">
 
