@@ -35,7 +35,7 @@ function admin_styles_script() {
  */
 add_action( 'wp_enqueue_scripts', 'front_styles_script' );
 function front_styles_script(){
-	wp_enqueue_script( 'dms-js-front', DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js' , array(), '1.0.0', true );
+	wp_enqueue_script( 'dms-js-front', DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js' , array(jquery), '1.0.0', true );
 	wp_enqueue_style( 'dms-style-front', DMS_PLUGINS_DIR_REL . '/assets/css/dms-front.css' );
 }
 
