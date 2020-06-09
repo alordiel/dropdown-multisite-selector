@@ -39,7 +39,7 @@ function front_styles_script() {
 		'dms-js-front',
 		DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js',
 		array( 'jquery' ),
-		filemtime( DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js' ),
+		filemtime( DMS_PLUGINS_DIR_ABS . '/assets/js/dms-front.js' ),
 		true );
 	wp_enqueue_style( 'dms-style-front', DMS_PLUGINS_DIR_REL . '/assets/css/dms-front.css' );
 }

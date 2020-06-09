@@ -3,7 +3,7 @@
 Tags: redirect, multisite, dropdown menu, flexible select, edit select options
 Requires at least: 3.8
 Contributors: alordiel
-Tested up to: 4.7.1.
+Tested up to: 5.4.1.
 Stable tag: /trunk/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -11,12 +11,12 @@ Gives you the resources to make select field with redirecting options to a given
 
 == Description ==
 
-Do you need a way to give your visitors the option to navigate easily from your site other sites (multisite)? 
+Do you need a way to give your visitors the option to navigate easily from your site other sites (multisite)?
 This plugin will give you the option to configure a small select/dropdown field with fully configurable options and values (urls).
 
 = You can choose by three options: =
 
-* manually configure the number of the options from the dropdown element - pick up a name of your option and the relevant url where the user will be redirected after choosing it; 
+* manually configure the number of the options from the dropdown element - pick up a name of your option and the relevant url where the user will be redirected after choosing it;
 
 * get a automatically list of all sites from WordPress Multisite network - this one picks the names of all your sites that are in the multisite network and adds them to the select element;
 
@@ -39,19 +39,26 @@ Once you have saved your settings you can see the result using this shortcode [d
 * target - could be "default" or "blank". This is the target of the link - "blank" is to be open in new window
 * options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"
 
-An example: 
+An example:
 [dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|http://duckduckgo.com, Tracking search engine|http://google.bg"]
 
 If you would more functionality, please contact me to check if I can implement it. Also thanks to everyone giving me hints how to improve this plugin.
 
+= Filters in the code =
+Here are some filters that you can use to modify the results from the code:
+* `dms_sites_arguments` - to control the attributes used in the function `get_sites()` when 'Show all sites in the WMN' option is selected.
+* `dms_multisite_pairs` - filter the results returned from `get_sites()`.
+* `dms_users_sites` - control the sites when 'Show only the sites where the user is registered' option is selected.
+
+
 == Installation ==
-= 
-From your WordPress dashboard 
+=
+From your WordPress dashboard
 =
 1. Visit 'Plugins > Add New'
 1. Search for 'Dropdown Multisite Selector'
 1. Activate Dropdown Multisite Selector from your Plugins page. To start building your dropdown go to Settings -> Dropdown multisite.
-= From WordPress.org 
+= From WordPress.org
 =
 1. Download 'Dropdown Multisite Selector'.
 1. Upload the 'dropdown-multisite-selector' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
@@ -65,6 +72,15 @@ From your WordPress dashboard
 
 == Changelog ==
 
+= 0.7.0 =
+* Added dependency on jQuery for the plugin's script
+* Added filter `dms_sites_arguments` - to control the attributes when 'Show all sites in the WMN' is selected
+* Added filter `dms_multisite_pairs`  - change the results returned from `get_sites()`
+* Added filter `dms_users_sites` - control the sites when 'Show only the sites where the user is registered' is selected
+* Code styling according WordPress CodeSniffer standards
+* Small code fixes and code clean up
+* Added default styles to admin button
+
 = 0.6.4 =
 * fixed bug with redirect on target blank when option without value is selected.
 
@@ -72,7 +88,7 @@ From your WordPress dashboard
 * fixed issue with WordPress repository and the last commit
 
 = 0.6.2 =
-* fixed issue with including a php files and trailing slashes for XAMPP and may be some windows server systems 
+* fixed issue with including a php files and trailing slashes for XAMPP and may be some windows server systems
 
 = 0.6.1. =
 * Implementing better security
