@@ -62,7 +62,7 @@ function showAll(){
 	foreach ($multisite_pairs as $name => $url) {
 		$out .= "<option value='" . esc_url($url) . "'>" . trim($name) . "</option>";
 	}
-	echo "</pre>";
+	#echo "</pre>";
 	return $out;
 }
 
