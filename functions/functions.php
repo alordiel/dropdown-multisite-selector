@@ -42,6 +42,7 @@ function showAll() {
 		'deleted' => 0,
 		'spam'    => 0,
 		'orderby' => array( 'path' ),
+		'number'  => 1000,
 	);
 
 	apply_filters('dms_sites_arguments', $sites_arguments);
