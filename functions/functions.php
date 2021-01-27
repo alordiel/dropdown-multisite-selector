@@ -41,12 +41,13 @@ function dms_show_all_network_sites() {
 
 	$out             = '';
 	$sites_arguments = array(
-		'public'  => 1,
+		'public'   => 1,
 		'archived' => 0,
-		'deleted' => 0,
-		'spam'    => 0,
-		'orderby' => array( 'path' ),
-		'number'  => 1000,
+		'mature'   => 0,
+		'deleted'  => 0,
+		'spam'     => 0,
+		'orderby'  => array( 'path' ),
+		'number'   => 1000,
 	);
 
 	apply_filters('dms_sites_arguments', $sites_arguments);
