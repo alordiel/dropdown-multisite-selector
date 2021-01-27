@@ -164,7 +164,7 @@ jQuery(document).ready(function () {
     };
 
     jQuery.ajax({
-      url: dms_ajax_vars.ajax_url,
+      url: trans_str.ajax_url,
       data: the_data,
       type: "post",
       success: function (response) {

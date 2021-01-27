@@ -19,15 +19,15 @@ function admin_styles_script() {
 
 	//Adding localization for script string
 	$translation_array = array(
-		'tag_err' => __( 'Please enter a select tag name.' ),
-		'let_err' => __( 'This field can contain only letters.' ),
-		'emt_err' => __( 'All Names and URL fields should be filled.' ),
-		'dup_err' => __( 'One of your Option names is written twice or more.' ),
-		'suc_err' => __( 'Your settings were saved successfully.' ),
-		'err_err' => __( 'Something went wrong!Please check your data and try again.' )
+		'tag_err'  => __( 'Please enter a select tag name.' ),
+		'let_err'  => __( 'This field can contain only letters.' ),
+		'emt_err'  => __( 'All Names and URL fields should be filled.' ),
+		'dup_err'  => __( 'One of your Option names is written twice or more.' ),
+		'suc_err'  => __( 'Your settings were saved successfully.' ),
+		'err_err'  => __( 'Something went wrong!Please check your data and try again.' ),
+		'ajax_url' => admin_url( 'admin-ajax.php' ),
 	);
 	wp_localize_script( 'dms-admin-js', 'trans_str', $translation_array );
-	wp_localize_script( 'dms-admin-js', 'dms_ajax_vars', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
 }
 
 /**
