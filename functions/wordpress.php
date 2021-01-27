@@ -14,6 +14,11 @@ function dropdown_multisite_meta_init() {
  */
 add_action( 'admin_enqueue_scripts', 'admin_styles_script' );
 function admin_styles_script() {
+
+	$admin_base = get_current_screen();
+	if (null !== $admin_base && 'settings_page_dropdown-multisite-selector' !== $admin_base->base) {
+		return;
+	}
 	wp_enqueue_script( 'dms-admin-js', DMS_PLUGINS_DIR_REL . '/assets/js/dms-admin.js', array('jquery'), '0.7.0' );
 	wp_enqueue_style( 'dms-admin-css', DMS_PLUGINS_DIR_REL . '/assets/css/dms-admin.css' );
 
