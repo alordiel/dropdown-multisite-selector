@@ -72,6 +72,10 @@ From your WordPress dashboard
 
 == Changelog ==
 
+= 0.8.2 =
+* Date: 27 Jan 2021
+* Fixe typo and adding one more parameter to the get_sites() function
+
 = 0.8.1 =
 * Date: 27 Jan 2021
 * Increased the limit of sites form the WMN from 100 to 1000

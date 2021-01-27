@@ -67,6 +67,9 @@ If you would more functionality, please contact me to check if I can implement i
 
 
 ## Changelog
+= 0.8.2 =
+* Date: 27 Jan 2021
+* Fixe typo and adding one more parameter to the get_sites() function
 
 = 0.8.1 =
 * Date: 27 Jan 2021
