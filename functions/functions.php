@@ -103,22 +103,16 @@ function cleanInput( $input ) {
 	return preg_replace( $search, '', $input );
 }
 
-function sanitize( $input ) {
+function dms_sanitize_input( $input ) {
 
 	if ( is_array( $input ) ) {
 
 		foreach ( $input as $var => $val ) {
-			$output[ $var ] = sanitize( $val );
+			$output[ $var ] = dms_sanitize_input( $val );
 		}
 
-	} else {
-
-		if ( get_magic_quotes_gpc() ) {
-			$input = stripslashes( $input );
-		}
-		$input = cleanInput( $input );
-
+		return $input;
 	}
 
-	return $input;
+	return cleanInput( stripslashes( $input ) );
 }

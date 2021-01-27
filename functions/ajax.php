@@ -63,10 +63,10 @@ function dms_ajax_update_fields() {
 	}
 
 	if ( $name !== false ) {
-		$name = cleanInput( sanitize( $name ) );
+		$name = cleanInput( dms_sanitize_input( $name ) );
 	}
-	$options     = cleanInput( sanitize( $options ) );
-	$placeholder = cleanInput( sanitize( htmlspecialchars( $placeholder ) ) );
+	$options     = cleanInput( dms_sanitize_input( $options ) );
+	$placeholder = cleanInput( dms_sanitize_input( htmlspecialchars( $placeholder ) ) );
 
 
 	if ( get_option( 'dms_select_name' ) != $name ) {
