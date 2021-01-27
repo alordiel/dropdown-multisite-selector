@@ -42,7 +42,7 @@ function dms_show_all_network_sites() {
 	$out             = '';
 	$sites_arguments = array(
 		'public'  => 1,
-		'archive' => 0,
+		'archived' => 0,
 		'deleted' => 0,
 		'spam'    => 0,
 		'orderby' => array( 'path' ),
