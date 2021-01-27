@@ -6,7 +6,7 @@ Requires at least: 3.8
 
 Contributors: alordiel
 
-Tested up to: 5.4.1.
+Tested up to: 5.6.0
 
 Stable tag: /trunk/
 

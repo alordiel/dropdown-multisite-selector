@@ -77,6 +77,9 @@ function usersOnly() {
 	$users_sites     = get_blogs_of_user( get_current_user_ID() );
 	$current_site_id = get_current_blog_id();
 
+	// Sort the sites by their blog name (as blog name is used in the select's options)
+	usort($users_sites, function($a, $b) {return strcmp($a->blogname, $b->blogname);});
+
 	apply_filters('dms_users_sites', $users_sites);
 
 	foreach ( $users_sites as $site ) {
