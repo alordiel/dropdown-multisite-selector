@@ -1,9 +1,10 @@
 <?php
 /**
  * Functions for displaying the select options on the front
+ *
+ * @return string
  */
-
-function noneOptions() {
+function dms_none_option_selected() {
 	$out     = '';
 	$options = get_option( 'dms_options' );
 	$sorting = get_option( 'dms_sorting' );
@@ -24,7 +25,6 @@ function noneOptions() {
 
 	}
 
-	//build the options
 	foreach ( $options as $key => $value ) {
 		$out .= "<option value='" . esc_url( $value ) . "'>" . trim( $key ) . "</option>";
 	}
@@ -32,8 +32,12 @@ function noneOptions() {
 	return $out;
 }
 
-//show all sites from the WMN
-function showAll() {
+/**
+ * Show all sites from the WMN
+ *
+ * @return string
+ */
+function dms_show_all_network_sites() {
 
 	$out             = '';
 	$sites_arguments = array(
@@ -70,8 +74,13 @@ function showAll() {
 	return $out;
 }
 
-//show only the sites from the WMN which the user is regged in
-function usersOnly() {
+
+/**
+ * Show only the sites from the WMN which the user is regged in
+ *
+ * @return string
+ */
+function dms_show_sites_for_registed_users_only() {
 
 	$out             = '';
 	$users_sites     = get_blogs_of_user( get_current_user_ID() );
@@ -91,8 +100,14 @@ function usersOnly() {
 	return $out;
 }
 
-// Function for sanitize
-function cleanInput( $input ) {
+
+/**
+ * Function for sanitize users input
+ *
+ * @param string $input
+ * @return string|string[]|null
+ */
+function dms_clean_up_user_input( $input ) {
 
 	$search = array(
 		'@<script[^>]*?>.*?</script>@si',
@@ -103,16 +118,23 @@ function cleanInput( $input ) {
 	return preg_replace( $search, '', $input );
 }
 
+
+/**
+ * Function for determing if an string or array is passed for sanitizing
+ *
+ * @param string|array $input
+ * @return string|string[]|null
+ */
 function dms_sanitize_input( $input ) {
 
 	if ( is_array( $input ) ) {
 
-		foreach ( $input as $var => $val ) {
-			$output[ $var ] = dms_sanitize_input( $val );
+		foreach ( $input as $key => $value ) {
+			$output[ $key ] = dms_sanitize_input( $value );
 		}
 
 		return $input;
 	}
 
-	return cleanInput( stripslashes( $input ) );
+	return dms_clean_up_user_input( stripslashes( $input ) );
 }

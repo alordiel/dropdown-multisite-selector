@@ -1,8 +1,8 @@
 <?php
 
 //general shortcode
-add_shortcode( 'dms', 'build_select' );
-function build_select() {
+add_shortcode( 'dms', 'dms_build_select' );
+function dms_build_select() {
 
 	$name        = false; // the name of the select's label
 	$out         = ''; // the output
@@ -30,12 +30,12 @@ function build_select() {
 	$out .= '<option value="">' . $placeholder . '</option>';
 
 	if ( $multisite === 'none' ) {
-		$out .= noneOptions();
+		$out .= dms_none_option_selected();
 	} elseif ( $multisite === 'all' ) {
-		$out .= showAll();
+		$out .= dms_show_all_network_sites();
 	} elseif ( $multisite === 'usersonly' ) {
 		if ( is_user_logged_in() ) {
-			$out .= usersOnly();
+			$out .= dms_show_sites_for_registed_users_only();
 		} else {
 			return false;
 		}
@@ -49,8 +49,8 @@ function build_select() {
 }
 
 
-add_shortcode( 'dms_manual', 'build_select_manual' );
-function build_select_manual( $attributes ) {
+add_shortcode( 'dms_manual', 'dms_build_select_manual' );
+function dms_build_select_manual( $attributes ) {
 	$output_error = '';
 	$output       = '';
 	$a            = shortcode_atts( array(

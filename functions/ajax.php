@@ -63,10 +63,10 @@ function dms_ajax_update_fields() {
 	}
 
 	if ( $name !== false ) {
-		$name = cleanInput( dms_sanitize_input( $name ) );
+		$name = dms_clean_up_user_input( dms_sanitize_input( $name ) );
 	}
-	$options     = cleanInput( dms_sanitize_input( $options ) );
-	$placeholder = cleanInput( dms_sanitize_input( htmlspecialchars( $placeholder ) ) );
+	$options     = dms_clean_up_user_input( dms_sanitize_input( $options ) );
+	$placeholder = dms_clean_up_user_input( dms_sanitize_input( htmlspecialchars( $placeholder ) ) );
 
 
 	if ( get_option( 'dms_select_name' ) != $name ) {

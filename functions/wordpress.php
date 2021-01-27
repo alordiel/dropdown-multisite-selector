@@ -12,8 +12,8 @@ function dropdown_multisite_meta_init() {
 /**
  * Register style sheet and scripts for the admin area.
  */
-add_action( 'admin_enqueue_scripts', 'admin_styles_script' );
-function admin_styles_script() {
+add_action( 'admin_enqueue_scripts', 'dms_admin_styles_script' );
+function dms_admin_styles_script() {
 
 	$admin_base = get_current_screen();
 	if (null !== $admin_base && 'settings_page_dropdown-multisite-selector' !== $admin_base->base) {
@@ -38,8 +38,8 @@ function admin_styles_script() {
 /**
  * Register style sheet and scripts for the front.
  */
-add_action( 'wp_enqueue_scripts', 'front_styles_script' );
-function front_styles_script() {
+add_action( 'wp_enqueue_scripts', 'dms_front_styles_script' );
+function dms_front_styles_script() {
 	wp_enqueue_script(
 		'dms-js-front',
 		DMS_PLUGINS_DIR_REL . '/assets/js/dms-front.js',
@@ -52,8 +52,8 @@ function front_styles_script() {
 /**
  * Register submenu in Settings.
  */
-add_action( 'admin_menu', 'register_submenu' );
-function register_submenu() {
+add_action( 'admin_menu', 'dms_register_submenu' );
+function dms_register_submenu() {
 
 	add_submenu_page(
 		'options-general.php',
