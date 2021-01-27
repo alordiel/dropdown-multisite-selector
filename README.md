@@ -67,6 +67,12 @@ If you would more functionality, please contact me to check if I can implement i
 
 
 ## Changelog
+
+= 0.8.1 =
+* Date: 27 Jan 2021
+* Increased the limit of sites form the WMN from 100 to 1000
+* Merged pull request (thanks to lisandi https://github.com/alordiel/dropdown-multisite-selector/pull/10)
+
 = 0.8.0 =
 * Date: 27 Jan 2021
 * Added alphabetic sorting for the blog names when WMN options are used
