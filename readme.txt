@@ -3,7 +3,7 @@
 Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
-Tested up to: 5.4.1.
+Tested up to: 5.6.0
 Stable tag: /trunk/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -72,8 +72,15 @@ From your WordPress dashboard
 
 == Changelog ==
 
+= 0.8.0 =
+* Date: 27 Jan 2021
+* Added alphabetic sorting for the blog names when WMN options are used
+* Removed deprecated funtion to support PHP 7.4
+* Plugins script and style will now be included on the DMS settings page
+* Some small code improvements and styling
+
 = 0.7.0 =
-* Date: 09.06.2020
+* Date: 09 Jun 2020
 * Thanks for github issues and code suggestions to: @toremo &  @Zodiac1978
 * And huge "Excuse me" to all that have waiting on update and making code compatible with WP 5.x.x
 * This updated includes:
