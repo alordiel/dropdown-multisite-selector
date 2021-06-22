@@ -50,7 +50,7 @@ function dms_show_all_network_sites() {
 		'number'   => 1000,
 	);
 
-	apply_filters('dms_sites_arguments', $sites_arguments);
+	$sites_arguments = apply_filters('dms_sites_arguments', $sites_arguments);
 
 	$all_wmn_sites   = get_sites( $sites_arguments );
 	$current_site_id = get_current_blog_id();
@@ -67,7 +67,7 @@ function dms_show_all_network_sites() {
 
 	ksort( $multisite_pairs );
 
-	apply_filters('dms_multisite_pairs', $multisite_pairs);
+	$multisite_pairs = apply_filters('dms_multisite_pairs', $multisite_pairs);
 
 	foreach ( $multisite_pairs as $name => $url ) {
 		$out .= "<option value='" . esc_url( $url ) . "'>" . trim( $name ) . '</option>';
@@ -91,7 +91,7 @@ function dms_show_sites_for_registed_users_only() {
 	// Sort the sites by their blog name (as blog name is used in the select's options)
 	usort($users_sites, function($a, $b) {return strcmp($a->blogname, $b->blogname);});
 
-	apply_filters('dms_users_sites', $users_sites);
+	$users_sites = apply_filters('dms_users_sites', $users_sites);
 
 	foreach ( $users_sites as $site ) {
 		if ( $current_site_id != $site->userblog_id ) {
