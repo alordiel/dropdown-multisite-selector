@@ -50,7 +50,7 @@ function dms_show_all_network_sites() {
 		'number'   => 1000,
 	);
 
-	apply_filters('dms_sites_arguments', $sites_arguments);
+	$sites_arguments = apply_filters('dms_sites_arguments', $sites_arguments);
 
 	$all_wmn_sites   = get_sites( $sites_arguments );
 	$current_site_id = get_current_blog_id();
