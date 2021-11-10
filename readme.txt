@@ -3,24 +3,21 @@
 Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
-Tested up to: 5.6.0
-Stable tag: /trunk/
+Tested up to: 5.8.1
+Stable tag: 0.8.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Gives you the resources to make select field with redirecting options to a given URLs.
 
 == Description ==
 
-Do you need a way to give your visitors the option to navigate easily from your site other sites (multisite)?
-This plugin will give you the option to configure a small select/dropdown field with fully configurable options and values (urls).
+With this plugin you can create fully configurable dropdown field which select options would work as links and will redirect the user to the selected one. It was originally built for multisite for faster navigation between each sub-site, but currently it also supports custom links as options from the dropdown.
 
-= You can choose by three options: =
+= There are three options: =
 
 * manually configure the number of the options from the dropdown element - pick up a name of your option and the relevant url where the user will be redirected after choosing it;
-
-* get a automatically list of all sites from WordPress Multisite network - this one picks the names of all your sites that are in the multisite network and adds them to the select element;
-
-* get the same list as previous one but only with the site where the current logged in user is registered;
+* get any list of all sites from WordPress Multisite network - this one picks the names of all your sites that are in the multisite network and adds them to the select element;
+* get the same list as previous one but only with the site where the current logged-in user is registered;
 
 = You can manage: =
 * Your label for the name of the select option or leave it without label
@@ -35,7 +32,7 @@ Once you have saved your settings you can see the result using this shortcode [d
 
 [dms_manual name="" placeholder="" target="" options=""] - Use this one your own dropdown that has nothing to do with the settings you have set. The arguments of this shortcode are:
 * name - the label of the select option (leave empty for no label)
-* placeholder - the first option that is showen in the select menu (like: "--  Select --")
+* placeholder - the first option that is shown in the select menu (like: "--  Select --")
 * target - could be "default" or "blank". This is the target of the link - "blank" is to be open in new window
 * options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"
 
@@ -71,6 +68,11 @@ From your WordPress dashboard
  2. The front end - widget area + shortcode in post(from version 0.3)
 
 == Changelog ==
+= 0.8.3 =
+* Date: 10 Nov 2021
+* merged pull request from Github by @andykillen (filter 'dms_sites_arguments' was never actually saved)
+* https://github.com/alordiel/dropdown-multisite-selector/pull/14
+* spelling and typos in the readme
 
 = 0.8.2 =
 * Date: 27 Jan 2021
@@ -78,19 +80,19 @@ From your WordPress dashboard
 
 = 0.8.1 =
 * Date: 27 Jan 2021
-* Increased the limit of sites form the WMN from 100 to 1000
-* Merged pull request (thanks to lisandi https://github.com/alordiel/dropdown-multisite-selector/pull/10)
+* Increased the limit of sites for the WMN from 100 to 1000
+* Merged pull request (thanks to @lisandi https://github.com/alordiel/dropdown-multisite-selector/pull/10)
 
 = 0.8.0 =
 * Date: 27 Jan 2021
 * Added alphabetic sorting for the blog names when WMN options are used
-* Removed deprecated funtion to support PHP 7.4
+* Removed deprecated function to support PHP 7.4
 * Plugins script and style will now be included on the DMS settings page
 * Some small code improvements and styling
 
 = 0.7.0 =
 * Date: 09 Jun 2020
-* Thanks for github issues and code suggestions to: @toremo &  @Zodiac1978
+* Thanks for Github issues and code suggestions to: @toremo &  @Zodiac1978
 * And huge "Excuse me" to all that have waiting on update and making code compatible with WP 5.x.x
 * This updated includes:
 * Added dependency on jQuery for the plugin's script
@@ -108,7 +110,7 @@ From your WordPress dashboard
 * fixed issue with WordPress repository and the last commit
 
 = 0.6.2 =
-* fixed issue with including a php files and trailing slashes for XAMPP and may be some windows server systems
+* fixed issue with including a php files and trailing slashes for XAMPP and may be some Windows' server systems
 
 = 0.6.1. =
 * Implementing better security
