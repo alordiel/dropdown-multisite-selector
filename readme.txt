@@ -4,7 +4,7 @@ Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
 Tested up to: 5.8.1
-Stable tag: 0.8.3
+Stable tag: 0.8.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Gives you the resources to make select field with redirecting options to a given URLs.
@@ -68,6 +68,10 @@ From your WordPress dashboard
  2. The front end - widget area + shortcode in post(from version 0.3)
 
 == Changelog ==
+= 0.8.4 =
+* Date: 10 Nov 2021
+* Applying changes from /trunk (deleted old files and folders)
+
 = 0.8.3 =
 * Date: 10 Nov 2021
 * merged pull request from Github by @andykillen (filter 'dms_sites_arguments' was never actually saved)
