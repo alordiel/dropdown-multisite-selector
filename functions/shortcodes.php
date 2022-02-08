@@ -35,7 +35,7 @@ function dms_build_select() {
 		$out .= dms_show_all_network_sites();
 	} elseif ( $multisite === 'usersonly' ) {
 		if ( is_user_logged_in() ) {
-			$out .= dms_show_sites_for_registed_users_only();
+			$out .= dms_show_sites_for_registered_users_only();
 		} else {
 			return false;
 		}
