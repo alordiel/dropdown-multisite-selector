@@ -68,8 +68,8 @@ From your WordPress dashboard
  2. The front end - widget area + shortcode in post(from version 0.3)
 
 == Changelog ==
-= 0.8.4 =
-* Date: 08 Feb 2022
+= 0.8.5 =
+* Date: 09 Feb 2022
 * Fix sorting to respect utf8 characters
 
 = 0.8.4 =

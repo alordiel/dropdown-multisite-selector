@@ -59,17 +59,17 @@ function dms_show_all_network_sites() {
 	foreach ( $all_wmn_sites as $site ) {
 
 		if ( $current_site_id !== $site->blog_id ) {
-			$the_site                                             = get_blog_details( $site->blog_id );
-			$multisite_pairs[ addslashes( $the_site->blogname ) ] = $the_site->siteurl;
+			$the_site          = get_blog_details( $site->blog_id );
+			$multisite_pairs[] = [ 'name' => addslashes( $the_site->blogname ), 'url' => $the_site->siteurl ];
 		}
 
 	}
 
-	uasort( $multisite_pairs, 'compareAlphabetically' );
+	uasort( $multisite_pairs, 'mb_dms_compare_alphabetically' );
 	$multisite_pairs = apply_filters( 'dms_multisite_pairs', $multisite_pairs );
 
-	foreach ( $multisite_pairs as $name => $url ) {
-		$out .= "<option value='" . esc_url( $url ) . "'>" . trim( $name ) . '</option>';
+	foreach ( $multisite_pairs as $site ) {
+		$out .= "<option value='" . esc_url( $site['url'] ) . "'>" . trim( $site['name'] ) . '</option>';
 	}
 
 	return $out;
@@ -87,7 +87,7 @@ function dms_show_sites_for_registered_users_only() {
 	$users_sites     = get_blogs_of_user( get_current_user_ID() );
 	$current_site_id = get_current_blog_id();
 
-	// Sort the sites by their blog name (as blog name is used in the select's options)
+	// Sort the sites by their blog name (as blog name is used in the selects options)
 	usort( $users_sites, static function ( $a, $b ) {
 		return strcmp( $a->blogname, $b->blogname );
 	} );
@@ -144,27 +144,34 @@ function dms_sanitize_input( $input ) {
 	return dms_clean_up_user_input( stripslashes( $input ) );
 }
 
-
-function compareAlphabetically( $a, $b ) {
-	if (empty($a) || empty($b)){
-		return 1;
+/**
+ * Will do a compare between the names of the sites to do an alphabetic sort
+ *
+ * @param array $a
+ * @param array $b
+ *
+ * @return boolean
+ */
+function mb_dms_compare_alphabetically( $a, $b ) {
+	if ( empty( $a['name'] ) || empty( $b['name'] ) ) {
+		return false;
 	}
 
-	$alphabet = 'aąbcćdeęfghijklłmnnoóqprsśtuvwxyzźż'; // i used polish letters
-	$a        = mb_strtolower( array_keys($a)[0] );
-	$b        = mb_strtolower( array_keys($b)[0] );
+	$alphabet = 'aąãáàäbcćdeęéêfghiíjklłmnnoóõôöóqprsśtuúüvwxyzźż';
+	$a        = mb_strtolower( $a['name'] );
+	$b        = mb_strtolower( $b['name'] );
 
 	for ( $i = 0, $iMax = mb_strlen( $a ); $i < $iMax; $i ++ ) {
 		if ( mb_substr( $a, $i, 1 ) === mb_substr( $b, $i, 1 ) ) {
 			continue;
 		}
 		if ( $i > mb_strlen( $b ) ) {
-			return 1;
+			return true;
 		}
 		if ( mb_strpos( $alphabet, mb_substr( $a, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b, $i, 1 ) ) ) {
-			return 1;
+			return true;
 		}
 
-		return - 1;
+		return false;
 	}
 }
