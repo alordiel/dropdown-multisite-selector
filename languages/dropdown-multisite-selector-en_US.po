@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Dropdown multisite selector\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-10 07:22+0000\n"
+"PO-Revision-Date: 2021-11-10 07:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.1\n"
+"X-Domain: dropdown-multisite-selector"
+
+#. Description of the plugin
+msgid ""
+"Allows you to configure a select option of redirecting to different webpages."
+msgstr ""
+
+#. Author of the plugin
+msgid "alordiel"
+msgstr ""
+
+#: templates/dms-admin.php:97
+msgid "Alphabetic sorting"
+msgstr ""
+
+#: templates/dms-admin.php:93
+msgid "Default"
+msgstr ""
+
+#: templates/dms-admin.php:181
+msgid "Description"
+msgstr ""
+
+#: templates/dms-admin.php:72
+msgid "Disabled"
+msgstr ""
+
+#: functions/ajax.php:46 functions/ajax.php:51
+msgid "Don't bug with the code, please!"
+msgstr ""
+
+#: templates/dms-admin.php:110
+msgid "Dropdown fields"
+msgstr ""
+
+#: functions/widgets.php:9
+msgid "Dropdown Multisite Selector"
+msgstr ""
+
+#. Name of the plugin
+msgid "Dropdown multisite selector"
+msgstr ""
+
+#: templates/dms-admin.php:54
+msgid "Dropdown settings"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://profiles.wordpress.org/alordiel"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/dropdown-multisite-selector/"
+msgstr ""
+
+#: functions/functions.php:14
+msgid ""
+"Missing data. Check if all the settings are correctly set in your admin area "
+"regarding 'Dropdown Multisite selector'"
+msgstr ""
+
+#: templates/dms-admin.php:189
+msgid "name - the label of the select option (leave empty for no label)"
+msgstr ""
+
+#: functions/widgets.php:29
+msgid "New title"
+msgstr ""
+
+#: templates/dms-admin.php:118
+msgid "Option name"
+msgstr ""
+
+#: templates/dms-admin.php:48
+msgid "Options"
+msgstr ""
+
+#: templates/dms-admin.php:192
+msgid ""
+"options - name-link pairs, should be placed as : \"name1|url1, name2|url2, "
+"name3|url3\""
+msgstr ""
+
+#: templates/dms-admin.php:190
+msgid ""
+"placeholder - the first option that is shown in the select menu (like: \"--  "
+"Select --\")"
+msgstr ""
+
+#: functions/ajax.php:61
+msgid "Please enter a place tag name."
+msgstr ""
+
+#: functions/ajax.php:57
+msgid "Please make sure that you have entered all fields correctly."
+msgstr ""
+
+#: templates/dms-admin.php:196
+msgid ""
+"Please note that if you use a multisite and your site url is different from "
+"your WordPress URL there the main site url will as the WordPress site URL "
+"for fixing this issue check the <a href=\"http://codex.wordpress."
+"org/Changing_The_Site_URL\">WordPress codex</a>."
+msgstr ""
+
+#: templates/dms-admin.php:102
+msgid ""
+"Reverse the order (last entries will be the first options in the dropdown)."
+msgstr ""
+
+#: templates/dms-admin.php:172
+msgid "Save"
+msgstr ""
+
+#: functions/shortcodes.php:10
+msgid "Select Option"
+msgstr ""
+
+#: templates/dms-admin.php:14
+msgid "Select option"
+msgstr ""
+
+#: templates/dms-admin.php:75
+msgid "Show all sites in the WMN."
+msgstr ""
+
+#: templates/dms-admin.php:79
+msgid ""
+"Show only the sites where the user is registered in the WMN. (works only for "
+"logged in users)"
+msgstr ""
+
+#: functions/widgets.php:11
+msgid "Shows a select options with site/multisites."
+msgstr ""
+
+#: functions/ajax.php:74 functions/ajax.php:81 functions/ajax.php:88
+#: functions/ajax.php:95 functions/ajax.php:102
+msgid "Something went wrong with updating your settings."
+msgstr ""
+
+#: templates/dms-admin.php:88
+msgid "Sorting options"
+msgstr ""
+
+#: templates/dms-admin.php:191
+msgid ""
+"target - could be \"default\" or \"blank\". This is the target of the link - "
+"\"blank\" is to be open in new window"
+msgstr ""
+
+#: templates/dms-admin.php:60
+msgid ""
+"The first option to show in the select element (for instance \"Select site\","
+" \"Select Option\")"
+msgstr ""
+
+#: templates/dms-admin.php:57
+msgid "The select tag label"
+msgstr ""
+
+#: templates/dms-admin.php:184
+msgid ""
+"The WordPress Multisite Network (WMN) Options gives you the option for "
+"creating an automatic list of options. <b>Show all sites in the WMN</b> is "
+"for a list with all the sites from the WMN, while the <b>Show only the sites "
+"where the user is registered in the WMN</b> is only for those sites where "
+"the logged in user is already registered - it is a nice and easy way to "
+"navigate through your multisite."
+msgstr ""
+
+#: functions/ajax.php:39
+msgid "This field can contain only letters."
+msgstr ""
+
+#: templates/dms-admin.php:5
+msgid "This page is forbidden for non-admins!"
+msgstr ""
+
+#: templates/dms-admin.php:185
+msgid ""
+"To add the select option on a page you can use this shortcode <code>[dms]"
+"</code>. It will use the options you have set from settings page.</br>If you "
+"would like to include it in a php file - use</br> <code>&lt;?php echo "
+"do_shortcode('[dms]'); ?&gt;</code>"
+msgstr ""
+
+#: templates/dms-admin.php:186
+msgid ""
+"To add your own values in the shortcode use this one: </br><code>[dms_manual "
+"name=\"\" placeholder=\"\" target=\"\" options=\"\"]</code>"
+msgstr ""
+
+#: templates/dms-admin.php:119
+msgid "URL to redirect"
+msgstr ""
+
+#: templates/dms-admin.php:187
+msgid "Where:"
+msgstr ""
+
+#: templates/dms-admin.php:68
+msgid "WordPress Multisite Network (WMN) Options"
+msgstr ""
+
+#: functions/shortcodes.php:87
+msgid ""
+"You have entered wrong array of sites! They should be in format "
+"\"url|sitename, url1|sitename1, ...\""
+msgstr ""

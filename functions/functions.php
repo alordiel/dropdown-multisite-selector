@@ -14,19 +14,23 @@ function dms_none_option_selected() {
 		return "<p class='error-front'>" . __( "Missing data. Check if all the settings are correctly set in your admin area regarding 'Dropdown Multisite selector'", 'dropdown-multisite-selector' ) . "</p>";
 	}
 
+	$sites = [];
+	foreach ($options as $name => $url) {
+		$sites[] = ['name' => $name, 'url'=>$url  ];
+	}
 	//check for sorting options
 	if ( $sorting === 'alphabetic' ) {
 
-		ksort( $options, SORT_NATURAL );
+		uasort( $sites, 'mb_dms_compare_alphabetically' );
 
 	} elseif ( $sorting === 'lastfirst' ) {
 
-		$options = array_reverse( $options, true );
+		$sites = array_reverse( $sites, true );
 
 	}
 
-	foreach ( $options as $key => $value ) {
-		$out .= "<option value='" . esc_url( $value ) . "'>" . trim( $key ) . "</option>";
+	foreach ( $sites as $site ) {
+		$out .= "<option value='" . esc_url( $site['url'] ) . "'>" . trim( $site['name'] ) . "</option>";
 	}
 
 	return $out;
@@ -168,10 +172,7 @@ function mb_dms_compare_alphabetically( $a, $b ) {
 		if ( $i > mb_strlen( $b ) ) {
 			return true;
 		}
-		if ( mb_strpos( $alphabet, mb_substr( $a, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b, $i, 1 ) ) ) {
-			return true;
-		}
 
-		return false;
+		return ( mb_strpos( $alphabet, mb_substr( $a, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b, $i, 1 ) ) );
 	}
 }

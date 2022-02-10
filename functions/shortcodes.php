@@ -82,14 +82,14 @@ function dms_build_select_manual( $attributes ) {
 	foreach ( $all_sites as $site ) {
 		$one_site = explode( '|', $site );
 		if ( count( $one_site ) === 2 ) {
-			$sites[ $one_site[0] ] = trim( $one_site[1] );
+			$sites[] = ['name'=>trim( $one_site[1] ), 'url' => $one_site[0]];
 		} else {
 			$output_error .= '<p>' . __( 'You have entered wrong array of sites! They should be in format "url|sitename, url1|sitename1, ..."', 'dropdown-multisite-selector' ) . '</p>';
 		}
 
 	}
-	foreach ( $sites as $blog_name => $url ) {
-		$output .= "<option value='" . $url . "'>" . $blog_name . '</option>';
+	foreach ( $sites as $site ) {
+		$output .= "<option value='" . $site['url'] . "'>" . $site['blog_name'] . '</option>';
 	}
 
 	$output .= '</select></div>';

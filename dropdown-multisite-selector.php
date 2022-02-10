@@ -3,7 +3,7 @@
  * Plugin Name:       Dropdown multisite selector
  * Plugin URI:        https://wordpress.org/plugins/dropdown-multisite-selector/
  * Description:       Allows you to configure a select option of redirecting to different webpages.
- * Version:           0.8.5
+ * Version:           0.8.6
  * Author:            alordiel
  * Author URI:        http://profiles.wordpress.org/alordiel
  * Text Domain:       dropdown-multisite-selector
@@ -43,7 +43,7 @@ include_once( DMS_PLUGINS_DIR_ABS . platformSlashes( '/functions/widgets.php' ) 
 include_once( DMS_PLUGINS_DIR_ABS . platformSlashes( '/functions/shortcodes.php' ) );
 
 
-// On install check if dms_multisite option exists, if not - this is updating from 0.1 so create it with option 'none'
+// after plugin activation check if dms_multisite option exists, if not - this is updating from 0.1 so create it with option 'none'
 register_activation_hook( __FILE__, 'dms_plugin_activated' );
 function dms_plugin_activated() {
 	if ( ! get_option( 'dms_multisite' ) ) {
@@ -57,7 +57,7 @@ function dms_plugin_activated() {
 	}
 }
 
-// On install check if dms_placeholder option exists, if not - this is updating from 0.33 so create it with option 'none'
+// after plugin activation check if dms_placeholder option exists, if not - this is updating from 0.33 so create it with option 'none'
 add_action( 'plugins_loaded', 'dms_plugin_updated' );
 function dms_plugin_updated() {
 	if ( ! get_option( 'dms_multisite' ) ) {
