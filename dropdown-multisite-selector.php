@@ -3,7 +3,7 @@
  * Plugin Name:       Dropdown multisite selector
  * Plugin URI:        https://wordpress.org/plugins/dropdown-multisite-selector/
  * Description:       Allows you to configure a select option of redirecting to different webpages.
- * Version:           0.9.0
+ * Version:           0.9.1
  * Author:            alordiel
  * Author URI:        http://profiles.wordpress.org/alordiel
  * Text Domain:       dropdown-multisite-selector

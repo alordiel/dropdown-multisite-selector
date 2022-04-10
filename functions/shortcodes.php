@@ -82,7 +82,14 @@ function dms_build_select_manual( $attributes ) {
 	foreach ( $all_sites as $site ) {
 		$one_site = explode( '|', $site );
 		if ( count( $one_site ) === 2 ) {
-			$sites[] = [ 'name' => trim( $one_site[1] ), 'url' => $one_site[0] ];
+			list( $url, $name ) = $one_site;
+			// check if positions are not switched
+			$name_is_a_link    = ( strpos( $name, 'https://' ) !== false || strpos( $name, 'http://' ) !== false );
+			$url_is_not_a_link = ( strpos( $url, 'https://' ) === false && strpos( $url, 'https://' ) === false );
+			if ( $name_is_a_link && $url_is_not_a_link ) {
+				list( $name, $url ) = $one_site;
+			}
+			$sites[] = [ 'name' => trim( $name ), 'url' => trim( $url ) ];
 		} else {
 			$output_error .= '<p>' . __( 'You have entered wrong array of sites! They should be in format "url|sitename, url1|sitename1, ..."', 'dropdown-multisite-selector' ) . '</p>';
 		}
