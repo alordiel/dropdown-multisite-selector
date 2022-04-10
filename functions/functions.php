@@ -15,8 +15,8 @@ function dms_none_option_selected() {
 	}
 
 	$sites = [];
-	foreach ($options as $name => $url) {
-		$sites[] = ['name' => $name, 'url'=>$url  ];
+	foreach ( $options as $name => $url ) {
+		$sites[] = [ 'name' => $name, 'url' => $url ];
 	}
 	//check for sorting options
 	if ( $sorting === 'alphabetic' ) {
@@ -162,17 +162,19 @@ function mb_dms_compare_alphabetically( $a, $b ) {
 	}
 
 	$alphabet = 'aąãáàäbcćdeęéêfghiíjklłmnnoóõôöóqprsśtuúüvwxyzźż';
-	$a        = mb_strtolower( $a['name'] );
-	$b        = mb_strtolower( $b['name'] );
+	$a_string = mb_strtolower( $a['name'] );
+	$b_string = mb_strtolower( $b['name'] );
 
-	for ( $i = 0, $iMax = mb_strlen( $a ); $i < $iMax; $i ++ ) {
-		if ( mb_substr( $a, $i, 1 ) === mb_substr( $b, $i, 1 ) ) {
+	for ( $i = 0, $iMax = mb_strlen( $a_string ); $i < $iMax; $i ++ ) {
+		if ( mb_substr( $a_string, $i, 1 ) === mb_substr( $b_string, $i, 1 ) ) {
 			continue;
 		}
-		if ( $i > mb_strlen( $b ) ) {
+		if ( $i > mb_strlen( $b_string ) ) {
 			return true;
 		}
 
 		return ( mb_strpos( $alphabet, mb_substr( $a, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b, $i, 1 ) ) );
 	}
+
+	return false;
 }

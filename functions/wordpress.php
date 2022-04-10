@@ -70,7 +70,5 @@ function dms_register_submenu() {
  * Building the admin part.
  */
 function dms_admin() {
-
-	$out = include( DMS_PLUGINS_DIR_ABS . platformSlashes( '/templates/dms-admin.php' ) );
-	return $out;
+	return include( DMS_PLUGINS_DIR_ABS . platformSlashes( '/templates/dms-admin.php' ) );
 }
