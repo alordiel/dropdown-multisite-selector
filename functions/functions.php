@@ -20,13 +20,11 @@ function dms_none_option_selected() {
 	}
 	//check for sorting options
 	if ( $sorting === 'alphabetic' ) {
-
 		uasort( $sites, 'mb_dms_compare_alphabetically' );
-
 	} elseif ( $sorting === 'lastfirst' ) {
-
 		$sites = array_reverse( $sites, true );
-
+	} elseif ( $sorting === 'numeric' ) {
+		uasort( $sites, 'dms_sort_numeric' );
 	}
 
 	foreach ( $sites as $site ) {
@@ -177,4 +175,16 @@ function mb_dms_compare_alphabetically( $a, $b ) {
 	}
 
 	return false;
+}
+
+
+function dms_sort_numeric( $a, $b ) {
+	if ( empty( $a['name'] ) || empty( $b['name'] ) ) {
+		return false;
+	}
+
+	$a_string = mb_strtolower( $a['name'] );
+	$b_string = mb_strtolower( $b['name'] );
+
+	return $a_string > $b_string;
 }

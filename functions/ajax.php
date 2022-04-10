@@ -11,7 +11,7 @@ function dms_ajax_update_fields() {
 	$sorting         = 'none';
 	$placeholder     = '';
 	$radio_buttons    = array( 'none', 'all', 'usersonly' );
-	$sorting_options = array( 'none', 'lastfirst', 'alphabetic' );
+	$sorting_options = array( 'none', 'lastfirst', 'alphabetic', 'numeric' );
 
 	if ( array_key_exists( 'name', $_POST ) ) {
 		$name = ! empty( $_POST['name'] ) ? $_POST['name'] : false;

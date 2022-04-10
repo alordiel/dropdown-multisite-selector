@@ -40,6 +40,7 @@ $checked = [
 	'none'      => ( $multisite === 'none' || ! $multisite ) ? 'checked="checked"' : '',
 	'sorting-none' => ( $sorting === 'none' || ! $sorting )? 'checked="checked"' : '',
 	'sorting-alphabetic' => ( $sorting === 'alphabetic' ) ? 'checked="checked"' : '',
+	'sorting-numeric' => ( $sorting === 'numeric' ) ? 'checked="checked"' : '',
 	'sorting-lastfirst' => ( $sorting === 'lastfirst' ) ? 'checked="checked"' : '',
 ];
 ?>
@@ -103,6 +104,11 @@ $checked = [
 				<input id="sorting-alphabetic" type="radio" name="sorting-option" <?php echo $checked['sorting-alphabetic']?> value="alphabetic">
 				<label for="sorting-alphabetic">
 					<?php _e( 'Alphabetic sorting', 'dropdown-multisite-selector' ); ?>
+				</label><br>
+
+				<input id="sorting-numeric" type="radio" name="sorting-option" <?php echo $checked['sorting-numeric']?> value="numeric">
+				<label for="sorting-numeric">
+					<?php _e( 'Numeric sorting', 'dropdown-multisite-selector' ); ?>
 				</label><br>
 
 				<input id="sorting-reverse" type="radio" name="sorting-option" <?php  echo $checked['sorting-lastfirst'] ?> value="lastfirst">
