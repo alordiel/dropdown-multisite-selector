@@ -57,7 +57,7 @@ function dms_build_select_manual( $attributes ) {
 		'name'        => '',
 		'placeholder' => 'Go to',
 		'target'      => 'default',
-		'options'     => array( 'sitename|url, sitename1|url1' )
+		'options'     => array( 'url|sitename, url1|sitename1' )
 	), $attributes );
 
 	$output .= "<div class='dms-container'>";
@@ -82,14 +82,14 @@ function dms_build_select_manual( $attributes ) {
 	foreach ( $all_sites as $site ) {
 		$one_site = explode( '|', $site );
 		if ( count( $one_site ) === 2 ) {
-			$sites[] = ['name'=>trim( $one_site[1] ), 'url' => $one_site[0]];
+			$sites[] = [ 'name' => trim( $one_site[1] ), 'url' => $one_site[0] ];
 		} else {
 			$output_error .= '<p>' . __( 'You have entered wrong array of sites! They should be in format "url|sitename, url1|sitename1, ..."', 'dropdown-multisite-selector' ) . '</p>';
 		}
 
 	}
 	foreach ( $sites as $site ) {
-		$output .= "<option value='" . $site['url'] . "'>" . $site['blog_name'] . '</option>';
+		$output .= "<option value='" . $site['url'] . "'>" . $site['name'] . '</option>';
 	}
 
 	$output .= '</select></div>';
