@@ -3,8 +3,8 @@
 Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
-Tested up to: 5.9.0
-Stable tag: 0.8.6
+Tested up to: 5.9.3
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Gives you the resources to make select field with redirecting options to a given URLs.
@@ -34,10 +34,10 @@ Once you have saved your settings you can see the result using this shortcode [d
 * name - the label of the select option (leave empty for no label)
 * placeholder - the first option that is shown in the select menu (like: "--  Select --")
 * target - could be "default" or "blank". This is the target of the link - "blank" is to be open in new window
-* options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"
+* options - name-link pairs, should be placed as : "url1|name1, url2|name2, url3|name3"
 
 An example:
-[dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|http://duckduckgo.com, Tracking search engine|http://google.bg"]
+[dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|https://duckduckgo.com, Tracking search engine|https://google.bg"]
 
 If you would more functionality, please contact me to check if I can implement it. Also thanks to everyone giving me hints how to improve this plugin.
 
@@ -64,10 +64,16 @@ From your WordPress dashboard
 
 == Screenshots ==
 
- 1. The admin part(from version 0.3)
- 2. The front end - widget area + shortcode in post(from version 0.3)
+ 1. The admin part
+ 2. The front end - widget area + shortcode in post
 
 == Changelog ==
+= 0.9.0 =
+* Date: 10 Apr 2022
+* Some more code refactored and organized
+* [Added] Numeric sorting
+* [Fix] for the [dms_manual] not working
+
 = 0.8.6 =
 * Date: 10 Feb 2022
 * Applying the sorting fix for the all options (not only WMN)

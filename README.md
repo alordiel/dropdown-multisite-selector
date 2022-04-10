@@ -1,9 +1,9 @@
  ## Plugin Name
 Requires at least: WordPress 3.8
 
-Tested up to: WordPress 5.9
+Tested up to: WordPress 5.9.3
 
-Stable tag: 0.8.6
+Stable tag: 0.9
 
 License: GPLv2 or later
 
@@ -34,12 +34,12 @@ Once you have saved your settings you can see the result using this shortcode [d
 * name - the label of the select option (leave empty for no label)
 * placeholder - the first option that is shown in the select menu (like: "--  Select --")
 * target - could be "default" or "blank". This is the target of the link - "blank" is to be open in new window
-* options - name-link pairs, should be placed as : "name1|url1, name2|url2, name3|url3"
+* options - name-link pairs, should be placed as : "url1|name1, url2|name2, url3|name3"
 
 An example:
 
 ```
-[dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|http://duckduckgo.com, Tracking search engine|http://google.bg"]
+[dms_manual name="Label" placeholder="--Select--" target="blank" options="Trusted search engine|https://duckduckgo.com, Tracking search engine|https://google.bg"]
 ```
 
 If you would more functionality, please contact me to check if I can implement it. Also thanks to everyone giving me hints how to improve this plugin.
