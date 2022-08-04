@@ -171,7 +171,7 @@ function mb_dms_compare_alphabetically( $a, $b ) {
 			return true;
 		}
 
-		return ( mb_strpos( $alphabet, mb_substr( $a, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b, $i, 1 ) ) );
+		return ( mb_strpos( $alphabet, mb_substr( $a_string, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b_string, $i, 1 ) ) );
 	}
 
 	return false;
