@@ -117,7 +117,7 @@ function dms_clean_up_user_input( $input ) {
 
 	$search = array(
 		'@<script[^>]*?>.*?</script>@si',
-		'@<[\/\!]*?[^<>]*?>@si',
+		'@<[/!]*?[^<>]*?>@si',
 		'@<![\s\S]*?--[ \t\n\r]*>@'
 	);
 
