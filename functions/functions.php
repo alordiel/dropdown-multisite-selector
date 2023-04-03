@@ -168,13 +168,13 @@ function mb_dms_compare_alphabetically( $a, $b ) {
 			continue;
 		}
 		if ( $i > mb_strlen( $b_string ) ) {
-			return true;
+			return 1;
 		}
-
-		return ( mb_strpos( $alphabet, mb_substr( $a_string, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b_string, $i, 1 ) ) );
+		$compared = ( mb_strpos( $alphabet, mb_substr( $a_string, $i, 1 ) ) > mb_strpos( $alphabet, mb_substr( $b_string, $i, 1 ) ) );
+		return $compared ? 1 : -1;
 	}
 
-	return false;
+	return -1;
 }
 
 
@@ -186,5 +186,5 @@ function dms_sort_numeric( $a, $b ) {
 	$a_string = mb_strtolower( $a['name'] );
 	$b_string = mb_strtolower( $b['name'] );
 
-	return $a_string > $b_string;
+	return $a_string > $b_string ? 1 : -1;
 }
