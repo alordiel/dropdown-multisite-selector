@@ -96,7 +96,7 @@ function dms_build_select_manual( $attributes ) {
 
 	}
 	foreach ( $sites as $site ) {
-		$output .= "<option value='" . $site['url'] . "'>" . $site['name'] . '</option>';
+		$output .= "<option value='" . esc_url($site['url']) . "'>" . esc_html($site['name']) . '</option>';
 	}
 
 	$output .= '</select></div>';
