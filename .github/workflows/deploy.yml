@@ -1,0 +1,22 @@
+name: Deploy to WordPress.org SVN
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deploy to WordPress.org
+        uses: 10up/action-wordpress-plugin-deploy@2.3.0
+        env:
+          SVN_USERNAME: ${{ secrets.WP_SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.WP_SVN_PASSWORD }}
+          SLUG: your-plugin-slug
