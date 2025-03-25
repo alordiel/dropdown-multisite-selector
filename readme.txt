@@ -3,8 +3,8 @@
 Tags: multisite, dropdown menu, flexible select, edit select options, redirect
 Requires at least: 3.8
 Contributors: alordiel
-Tested up to: 6.4.2
-Stable tag: 0.9.2.1
+Tested up to: 6.7.2
+Stable tag: 0.9.3
 Requires PHP: 7.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -69,6 +69,10 @@ From your WordPress dashboard
  2. The front end - widget area + shortcode in post
 
 == Changelog ==
+
+= 0.9.3 =
+* Date: 25 March 2025
+* Security patch
 
 = 0.9.2 =
 * Date: 20 Jan 2024

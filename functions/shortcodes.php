@@ -50,7 +50,8 @@ function dms_build_select() {
 
 
 add_shortcode( 'dms_manual', 'dms_build_select_manual' );
-function dms_build_select_manual( $attributes ) {
+function dms_build_select_manual( $attributes ): string
+{
 	$output_error = '';
 	$output       = '';
 	$a            = shortcode_atts( array(
@@ -64,7 +65,7 @@ function dms_build_select_manual( $attributes ) {
 
 	//Hide the label
 	if ( ! empty( $a['name'] ) ) {
-		$output .= "<label for='dms-select'>" . $a['name'] . '</label>';
+		$output .= "<label for='dms-select'>" . esc_html($a['name']) . '</label>';
 	}
 
 	// add class for opening in new tab
@@ -74,7 +75,7 @@ function dms_build_select_manual( $attributes ) {
 		$output .= "<select class='dms-select'>";
 	}
 
-	$output .= "<option value=''>" . $a['placeholder'] . '</option>';
+	$output .= "<option value=''>" . esc_html($a['placeholder']) . '</option>';
 
 	//load the options for the site
 	$all_sites = explode( ',', $a['options'] );
@@ -85,7 +86,7 @@ function dms_build_select_manual( $attributes ) {
 			list( $url, $name ) = $one_site;
 			// check if positions are not switched
 			$name_is_a_link    = ( strpos( $name, 'https://' ) !== false || strpos( $name, 'http://' ) !== false );
-			$url_is_not_a_link = ( strpos( $url, 'https://' ) === false && strpos( $url, 'https://' ) === false );
+			$url_is_not_a_link = ( strpos( $url, 'https://' ) === false && strpos( $url, 'http://' ) === false );
 			if ( $name_is_a_link && $url_is_not_a_link ) {
 				list( $name, $url ) = $one_site;
 			}

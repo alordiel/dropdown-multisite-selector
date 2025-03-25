@@ -1,9 +1,9 @@
  ## Plugin Name
 Requires at least: WordPress 3.8
 
-Tested up to: WordPress 6.4.1
+Tested up to: WordPress 6.7.2
 
-Stable tag: 0.9.2.1
+Stable tag: 0.9.3
 
 License: GPLv2 or later
 
