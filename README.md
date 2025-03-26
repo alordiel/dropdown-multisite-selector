@@ -3,7 +3,7 @@ Requires at least: WordPress 3.8
 
 Tested up to: WordPress 6.7.2
 
-Stable tag: 0.9.3
+Stable tag: 0.9.4
 
 License: GPLv2 or later
 
